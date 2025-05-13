@@ -1,0 +1,25 @@
+# Ignore Python virtual environments
+venv/
+.env
+
+# Ignore Python cache files
+**/__pycache__/
+**/*.pyc
+
+# Frontend
+# built in local development, using static files from the backend
+frontend/
+
+# Ignore Docker-related files
+Dockerfile*
+docker-compose*
+
+# Git
+.git
+.gitignore
+README.md
+
+# Project specific
+db.sqlite3
+
+
