@@ -145,5 +145,5 @@ CHANNEL_LAYERS = {
                 "hosts": [(env.str('REDISHOST', default="redis"), 6379)],
              },           
         }              
-     }    
- 
+     }
+
