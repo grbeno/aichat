@@ -7,10 +7,7 @@ venv/
 **/*.pyc
 
 # Frontend
-# built in local development, using static files from the backend
-#frontend/
-
-# Ignore frontend dependencies and build output, but NOT the source code
+# Ignore frontend dependencies and build output
 frontend/node_modules/
 frontend/build/
 frontend/dist/

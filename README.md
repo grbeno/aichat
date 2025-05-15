@@ -12,6 +12,7 @@ OPENAI_API_KEY=<api-key>
 SECRET_KEY=<secret-key>
 DEBUG=True
 ALLOWED_HOSTS=localhost,127.0.0.1
+VITE_WS_URL=ws://localhost:8000
 ```
 ### The app uses OpenAI API-key, but any provider's API should work (read the provider's documentation)
 [https://platform.openai.com/docs/quickstart?api-mode=chat](https://platform.openai.com/docs/quickstart?api-mode=chat)
@@ -28,6 +29,10 @@ docker build .
 ```
 docker-compose -f docker-compose-dev.yml up --build
 ```
+Removing containers:
+```
+docker-compose -f docker-compose-dev.yml down
+```
 #### Run the app in the web browser
 ```
 http://localhost:8000
@@ -39,7 +44,8 @@ http://localhost:8000
 #### Key steps
 - Add new project from GitHub
 - Set domain on the port 8080
-- Set the same variables in the Settings panel but change ALLOWED_HOSTS to the new domain
+- Set the same variables except `DEBUG` in the Settings panel but change `ALLOWED_HOSTS` to the new domain
+- Change `VITE_WS_URL` with the new host name and the `wss://` protocol
 - Use Start Command: `daphne -b 0.0.0.0 -p 8080 config.asgi:application`
 - Grab `docker-compose-railway.yml` from your file browser and drop on project canvas
 
