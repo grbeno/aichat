@@ -145,5 +145,6 @@ CHANNEL_LAYERS = {
                 "hosts": [(env.str('REDISHOST', default="redis"), 6379)],
              },           
         }              
-     }    
- 
+     }
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

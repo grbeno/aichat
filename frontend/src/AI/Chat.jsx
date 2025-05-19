@@ -15,7 +15,8 @@ const WebSocketChat = () => {
 
     // Initialize WebSocket connection
     useEffect(() => {
-        const websocket = new WebSocket('ws://localhost:8000/ws/chat/');
+        console.log('Initializing WebSocket connection...');
+        const websocket = new WebSocket(window.WS_URL + '/ws/chat/');
         socketRef.current = websocket;
 
         websocket.onopen = () => {
